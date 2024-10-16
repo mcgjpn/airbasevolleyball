@@ -4,6 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "build-ci": "npm run js-build && eleventy && npm run test",
+    "build": "npm run clean && npm run build-ci",
+    "watch": "concurrently \"npm run serve\" \"npm run js-build-watch\" \"npm run test-watch\"",
+    "serve": "npm run clean && eleventy --serve"
   },
   "keywords": [],
   "author": "",
