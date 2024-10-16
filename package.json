@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./_site",  // Define this if you need to clean build files
+    "js-build": "echo \"Add JS build script here\"",  // Add your actual JS build command
+    "js-build-watch": "echo \"Add JS build watch command here\"",  // If you need a JS build watch
+    "test-watch": "echo \"Add test watch command here\"",  // If you have watch tests
     "build-ci": "npm run js-build && eleventy && npm run test",
     "build": "npm run clean && npm run build-ci",
     "watch": "concurrently \"npm run serve\" \"npm run js-build-watch\" \"npm run test-watch\"",
@@ -14,6 +18,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "concurrently": "^7.0.0",  // Add this if you're using concurrently
+    "rimraf": "^3.0.0"  // Add this if you need to clean the build folder
   }
 }
