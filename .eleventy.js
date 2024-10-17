@@ -6,7 +6,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: ".", // root directory (where your index.html is)
-      output: "_site" // output directory
+      output: "_site", // output directory
+      pathPrefix: "./" 
     }
   };
 };
