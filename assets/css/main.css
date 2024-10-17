@@ -7,3 +7,35 @@ body {
   p {
     color: red;
   }
+
+  .skill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .skill-table th, .skill-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .skill-table thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .skill-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .skill-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .skill-table td[colspan="3"] {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+  }
