@@ -11,7 +11,7 @@ body {
 
 header {
   background-color: #333;
-  padding: 20px 0; /* Top and bottom padding */
+  padding: 25px 0; /* Top and bottom padding */
   color: white;
 }
 
@@ -39,33 +39,6 @@ header {
   font-size: 24px;
   color: white;
 }
-
-/* Ensure navbar occupies only a portion of the width */
-.navbar {
-  flex: 0 0 50%; /* Takes up 50% of the header container's width */
-}
-
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-
 
 .skill-table {
   width: 100%;
@@ -101,3 +74,80 @@ header {
   font-weight: bold;
 }
 
+/* Ensure navbar occupies only a portion of the width */
+.navbar {
+  flex: 0 0 50%; /* Takes up 50% of the header container's width */
+  position: relative; /* This will allow dropdown positioning */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  background-color: #333; /* Ensure the navbar has a background */
+}
+
+.navbar ul li {
+  margin: 0 15px;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 25px 15px; /* Adjusted padding for consistent height */
+}
+
+.navbar ul li a:hover {
+  text-decoration: none;
+  background-color: red; /* Change background color on hover */
+}
+
+/* Dropdown specific styles */
+.dropdown {
+  position: relative; /* Position relative to parent for absolute positioning of dropdown */
+}
+
+/* Dropdown styles */
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0caa41;
+  min-width: 100%; /* Ensure dropdown is the same width as the button */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 0; /* Align left with parent */
+  top: calc(100% + 5px); /* Adds a gap of 5px below the button */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 15px 20px; /* Padding for dropdown items */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #681a1a; /* Change background color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropbtn {
+  padding: 30px 25px; /* Keep padding consistent */
+  margin: 0; /* Ensure no additional margin */
+}
