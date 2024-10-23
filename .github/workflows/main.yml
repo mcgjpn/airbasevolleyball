@@ -3,7 +3,7 @@ name: Deploy airbase volleyball website
 on:
   push:
     branches:
-      - main  # Deploy on pushes to the main branch
+      - develop  # Deploy on pushes to the main branch
   
   workflow_dispatch:  # Enable manual triggering of the workflow
 
