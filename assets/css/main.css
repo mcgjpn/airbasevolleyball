@@ -5,14 +5,38 @@
   box-sizing: border-box;
 }
 
+/* Global container width for desktop and larger screens */
+.width-of-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Optional: Adds padding for small screens */
+}
+
+/* Media query for tablet devices (max-width 768px) */
+@media (max-width: 768px) {
+  .width-of-page-container {
+    max-width: 100%; /* Remove width restriction for tablets */
+    padding: 0 15px; /* Add smaller padding */
+  }
+}
+
+/* Media query for mobile devices (max-width 480px) */
+@media (max-width: 480px) {
+  .width-of-page-container {
+    max-width: 100%; /* Remove width restriction for mobile */
+    padding: 0 10px; /* Adjust padding for smaller mobile screens */
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
 }
 
 header {
   background-color: #333;
-  padding: 25px 0; /* Top and bottom padding */
+  padding: 0; /* Top and bottom padding */
   color: white;
+  font-weight: bold;
 }
 
 /* Center the header container and limit its width */
@@ -40,114 +64,102 @@ header {
   color: white;
 }
 
-.skill-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 18px;
-  text-align: left;
-}
-
-.skill-table th,
-
-.skill-table td {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-}
-
-.skill-table thead {
-  background-color: #333;
-  color: #fff;
-}
-
-.skill-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.skill-table tbody tr:hover {
-  background-color: #ddd;
-}
-
-.skill-table td[colspan="3"] {
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Ensure navbar occupies only a portion of the width */
-.navbar {
-  flex: 0 0 50%; /* Takes up 50% of the header container's width */
-  position: relative; /* This will allow dropdown positioning */
-}
-
-.navbar ul {
+ul {
   list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
-  background-color: #333; /* Ensure the navbar has a background */
+  overflow: hidden;
+  background-color: #333;
 }
 
-.navbar ul li {
-  margin: 0 15px;
-  position: relative; /* Needed for dropdown positioning */
+li {
+  float: left;
 }
 
-.navbar ul li a {
+li a, .dropbtn {
+  display: inline-block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
-  padding: 25px 15px; /* Adjusted padding for consistent height */
+  transition: background-color 0.5s ease;
+
 }
 
-.navbar ul li a:hover {
-  text-decoration: none;
-  background-color: red; /* Change background color on hover */
+/* Glowing effect on hover */
+li a:hover, .dropdown:hover > .dropbtn {
+  background-color: rgb(0, 100, 100);
+  transition: background-color 0.5s ease;
 }
 
-/* Dropdown specific styles */
-.dropdown {
-  position: relative; /* Position relative to parent for absolute positioning of dropdown */
-}
-
-/* Dropdown styles */
 li.dropdown {
   display: inline-block;
 }
 
+/* First dropdown content styles */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0caa41;
-  min-width: 100%; /* Ensure dropdown is the same width as the button */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  left: 0; /* Align left with parent */
-  top: calc(100% + 5px); /* Adds a gap of 5px below the button */
 }
 
+/* Dropdown links */
 .dropdown-content a {
   color: black;
-  padding: 15px 20px; /* Padding for dropdown items */
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
+/* Change background color on hover for dropdown links */
 .dropdown-content a:hover {
-  background-color: #681a1a; /* Change background color on hover */
+  background-color: #dddddd;
 }
 
+/* Show first dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+/* Show nested dropdown on hover */
+.nested-dropdown:hover .nested-dropdown-content {
+  display: block; /* Show nested dropdown */
 }
 
-.dropbtn {
-  padding: 30px 25px; /* Keep padding consistent */
-  margin: 0; /* Ensure no additional margin */
+.nested-dropdown {
+  position: relative; /* Position for nested dropdown */
+}
+
+/* Nested dropdown content */
+.nested-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%; /* Aligns to the right of the parent */
+  top: 0; /* Aligns to the top of the parent */
+  background-color: #f9f9f9;
+  min-width: 160px; /* Width of nested dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2; /* Higher z-index to be above others */
+}
+
+/* Show nested dropdown on hover */
+.nested-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change background color on hover for nested dropdown links */
+.nested-dropdown-content a:hover {
+  background-color: #dddddd;
+}
+
+/* Style for the active link */
+.active {
+  background-color: rgb(0, 100, 100); /* Active link background color */
 }

@@ -20,16 +20,32 @@
                             <li>
                                 <a href="games.html">GAMES</a>
                             </li>
-                            <li>
-                                <a href="locations.html">LOCATIONS</a>
-                            </li>
-                            <!-- Insert dropdown here -->
                             <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">SKILL MAP</a>
+                                <a href="javascript:void(0)" class="dropbtn">LOCATIONS</a>
                                 <div class="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
+                                    <a href="#">Hatadonai</a>
+                                    <a href="#">Yoyogisanya</a>
+                                    <a href="#">Shibuya Sports Centre</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                {# <a href="javascript:void(0)" class="dropbtn">SKILL MAP</a> #}
+                                <a href="skills.html" class="dropbtn">SKILL MAP</a>
+                                <div class="dropdown-content">
+                                    <div class="nested-dropdown">
+                                        <a href="#">Comparison Chart</a>
+                                        <div class="nested-dropdown-content">
+                                            <a href="#">Offense</a>
+                                            <a href="#">Defense</a>
+                                            <a href="#">Position</a>
+                                            <a href="#">IQ</a>
+                                        </div>
+                                    </div>
+                                    <a href="#">Beginner</a>
+                                    <a href="#">Intermediate</a>
+                                    <a href="#">Advanced</a>
+                                    <a href="#">Competitive</a>
+                                    <a href="#">Professional</a>
                                 </div>
                             </li>
                             <li>
@@ -42,4 +58,12 @@
         </header>
         {{ content | safe }}
     </body>
+    <script>
+        const links = document.querySelectorAll('.navbar a');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </html>
