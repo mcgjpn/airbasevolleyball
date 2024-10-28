@@ -3,11 +3,58 @@ layout: base.njk
 title: Airbase Volleyball
 permalink: "/index.html"
 ---
-<div class="width-of-page-container">
-<p>My first paragraph.</p>
-<img src="/airbasevolleyball/images/pic01.jpg" width="200" height="200">
-<p style="color:red;">This is a red paragraph.</p>
-<a href="skills.html">visit the skills page</a>
+
+<div class="carousel">
+  <img class="carousel-image" src="images/gb1.jpg" alt="Image 1" style="object-position: top;">
+  <img class="carousel-image" src="images/gb2.jpg" alt="Image 2">
+  <img class="carousel-image" src="images/gb4.jpg" alt="Image 4">
 </div>
 
+<!-- Buttons Section -->
+<section class="buttons-section">
+  <button onclick="window.location.href='games.html'">View Games</button>
+  <button onclick="window.location.href='about.html'">Learn More About Us</button>
+  <button onclick="window.location.href='locations.html'">Find Locations</button>
+</section>
 
+<!-- Boxed Sections (example for featured content) -->
+<section class="featured-section">
+  <div class="feature-box">
+    <h2>Latest Tournament</h2>
+    <p>Join our upcoming volleyball tournament!</p>
+  </div>
+  <div class="feature-box">
+    <h2>Training Programs</h2>
+    <p>Improve your volleyball skills with our training camps.</p>
+  </div>
+  <div class="feature-box">
+    <h2>Community Events</h2>
+    <p>Connect with other volleyball players in our community events.</p>
+  </div>
+</section>
+
+<script>
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.carousel-image');
+  const totalImages = images.length;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) {
+        img.classList.add('active');
+      }
+    });
+  }
+
+  function rotateImages() {
+    currentImageIndex = (currentImageIndex + 1) % totalImages; // Loop back to the first image
+    showImage(currentImageIndex);
+  }
+
+  // Initially show the first image
+  showImage(currentImageIndex);
+
+  // Rotate images every 10 seconds
+  setInterval(rotateImages, 10000); // 10000 ms = 10 seconds
+</script>
