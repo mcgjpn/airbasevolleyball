@@ -32,7 +32,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0px;
   padding: 0px;
-  background-color: #f9f9f9bb; /* Light background for the page */
+  background-color: white; /* Light background for the page */
 }
 
 header {
@@ -69,23 +69,23 @@ header {
 
 .page-header {
     background-color: #f0f0f0; /* Change to your desired background color */
-    padding: 15px; /* Adjust padding as needed */
+    padding: 20px; /* Adjust padding as needed */
     color: #333; /* Change the text color if needed */
     border-radius: 5px; /* Optional: adds rounded corners */
     margin-bottom: 20px; /* Optional: adds space below the header */
     width: 100%; /* Full width */
     text-align: right; /* Center text */
-    padding-right: 1235px; /* Add padding to the right */
+    padding-right: 1365px; /* Add padding to the right */
     margin: 0; /* Remove default margin */
     font-size:x-large;
 }
 
 .rules-container {
   background-color: white; /* White background for the rules box */
-  border: 1px solid #ccc; /* Light gray border */
+  /* border: 1px solid white; */ /* Light gray border */
   border-radius: 8px; /* Rounded corners */
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow */
 }
 
 .rule-item {
@@ -95,19 +95,21 @@ header {
 .expand-btn {
   display: block; /* Make the button block-level for full width */
   padding: 10px;
-  background-color: #007bff; /* Blue button */
+  background-color: rgb(0, 100, 100); /* Blue button */
   color: white; /* Text color */
   border: none;
   border-radius: 4px; /* Rounded corners */
   cursor: pointer;
   width: 100%; /* Full width */
   text-align: left; /* Align text to the left */
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .expand-content {
   display: none; /* Hide content by default */
   padding: 10px;
-  background-color: #e9ecef; /* Light background for expanded content */
+  background-color: #f3f3f3; /* Light background for expanded content */
   border-radius: 4px; /* Rounded corners */
   margin-top: 5px; /* Space between button and content */
 }
@@ -309,4 +311,20 @@ li.dropdown {
 
 .object-offset-0 {
   transform: translate(-50%, 0); /* No vertical offset */
+}
+
+
+.rules-bullet-list {
+  background-color: #f3f3f3;
+  list-style-type: square;
+  padding-left: 20px; /* Increase padding to ensure indentation */
+  display: block; /* Ensure list displays as block */
+}
+
+.rules-bullet-list li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+  display: list-item; /* Ensure list items behave like block items */
+  width: 100%; /* Make sure each list item takes up full width */
 }
