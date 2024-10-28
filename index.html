@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/airbasevolleyball/assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/main.css">
         <link rel="icon" type="image/x-icon" href="/images/Microsoft-Fluentui-Emoji-Mono-Volleyball.32.png">
         <title>Airbase Volleyball</title>
         <base href="/airbasevolleyball/">
@@ -17,8 +17,22 @@
                     </a>
                     <nav class="navbar">
                         <ul>
-                            <li>
-                                <a href="games.html">GAMES</a>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">GAMES</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Pickup Games</a>
+                                    <a href="rules.html">Rules</a>
+                                    <a href="#">Net Setup</a>
+                                    <div class="nested-dropdown">
+                                        <a href="#">Format</a>
+                                        <div class="nested-dropdown-content">
+                                            <a href="#">Beginner</a>
+                                            <a href="#">Intermediate</a>
+                                            <a href="#">Advanced</a>
+                                            <a href="#">Reverse 6s</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropbtn">LOCATIONS</a>
@@ -28,7 +42,8 @@
                                     <a href="#">Shibuya Sports Centre</a>
                                 </div>
                             </li>
-                            <li class="dropdown">
+                            <li
+                                class="dropdown">
                                 
                                 <a href="skills.html" class="dropbtn">SKILL MAP</a>
                                 <div class="dropdown-content">
@@ -48,30 +63,113 @@
                                     <a href="#">Professional</a>
                                 </div>
                             </li>
-                            <li>
-                                <a href="about.html">ABOUT</a>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+                                <div class="dropdown-content">
+                                    <a href="#">About Airbase Volleyball</a>
+                                    <a href="#">Policies</a>
+                                    <a href="#">Contact Us</a>
+                                </div>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-        <div class="width-of-page-container">
-<p>My first paragraph.</p>
-<img src="/airbasevolleyball/images/pic01.jpg" width="200" height="200">
-<p style="color:red;">This is a red paragraph.</p>
-<a href="skills.html">visit the skills page</a>
+        
+<div class="carousel">
+  <img class="carousel-image" src="images/gb1.jpg" alt="Image 1" style="object-position: top;">
+  <img class="carousel-image" src="images/gb2.jpg" alt="Image 2">
+  <img class="carousel-image" src="images/gb4.jpg" alt="Image 4">
 </div>
 
+<!-- Buttons Section -->
+<section class="buttons-section">
+  <button onclick="window.location.href='games.html'">View Games</button>
+  <button onclick="window.location.href='about.html'">Learn More About Us</button>
+  <button onclick="window.location.href='locations.html'">Find Locations</button>
+</section>
 
+<!-- Boxed Sections (example for featured content) -->
+<section class="featured-section">
+  <div class="feature-box">
+    <h2>Latest Tournament</h2>
+    <p>Join our upcoming volleyball tournament!</p>
+  </div>
+  <div class="feature-box">
+    <h2>Training Programs</h2>
+    <p>Improve your volleyball skills with our training camps.</p>
+  </div>
+  <div class="feature-box">
+    <h2>Community Events</h2>
+    <p>Connect with other volleyball players in our community events.</p>
+  </div>
+</section>
 
+<script>
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.carousel-image');
+  const totalImages = images.length;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) {
+        img.classList.add('active');
+      }
+    });
+  }
+
+  function rotateImages() {
+    currentImageIndex = (currentImageIndex + 1) % totalImages; // Loop back to the first image
+    showImage(currentImageIndex);
+  }
+
+  // Initially show the first image
+  showImage(currentImageIndex);
+
+  // Rotate images every 10 seconds
+  setInterval(rotateImages, 10000); // 10000 ms = 10 seconds
+</script>
+        <footer>
+            <!-- You can create your footer here, and it will be shared across all pages -->
+            <div class="footer-content">
+                <p>Follow us on social media</p>
+                <!-- Add social media links, contact info, etc. -->
+            </div>
+        </footer>
     </body>
+    
     <script>
         const links = document.querySelectorAll('.navbar a');
         links.forEach(link => {
             if (link.href === window.location.href) {
                 link.classList.add('active');
+                // If the link is within a dropdown, add the active class to the parent dropdown button
+                const dropdown = link.closest('.dropdown-content');
+                if (dropdown) {
+                    const parentLink = dropdown.previousElementSibling;
+                    if (parentLink) {
+                        parentLink.classList.add('active'); // Highlight the parent dropdown button
+                    }
+                }
+                // If the link is a direct child of a dropdown, highlight the dropdown itself
+                const parentDropdown = link.closest('.dropdown');
+                if (parentDropdown) {
+                    const dropbtn = parentDropdown.querySelector('.dropbtn');
+                    if (dropbtn) {
+                        dropbtn.classList.add('active'); // Add active class to the dropdown button
+                    }
+                }
             }
         });
+        function toggleExpand(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none"; // Hide content
+            } else {
+                content.style.display = "block"; // Show content
+            }
+        }
     </script>
 </html>
