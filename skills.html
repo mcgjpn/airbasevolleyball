@@ -1,77 +1,94 @@
 ---
 layout: base.njk
-title: Skills Page
+title: Skill Level Guide
 permalink: "/skills.html"
 ---
-<div class="width-of-page-container">
-    <h1>Skills Page</h1>
-    <p>This page will display all 10 skill levels so you can assess your skill level.</p>
-    <img src="images/pic01.jpg" width="200" height="200">
 
-    <table class="skill-table">
+<h1 class="page-header"> {{title}} </h1>
+<br>
+<div class="width-of-page-container">
+    <p>&nbsp;&nbsp;&nbsp;This is the skill level guide page. Please use this page to determine which Airbase
+        Volleyball pickup game to participate in.</p>
+    <br>
+    <table>
+        <colgroup>
+            <col class="descriptions-skill-table" />
+            <col class="no-border" /> <!-- Column for Passing, Covering, Blocking -->
+            <col class="beginner-skill-table" />
+            <col class="intermediate-skill-table" />
+            <col class="advanced-skill-table" />
+            <col class="competitive-skill-table" />
+        </colgroup>
         <thead>
             <tr>
-                <th></th>
-                <th>BEGINNER <br>
-                    < 1500 <br>
-                        WHITE
-                </th>
-                <th>BEGINNER+ <br>
-                    < 1600 <br>
-                        YELLOW
-                </th>
-                <th>INTERMEDIATE <br>
-                    < 1700 <br>
-                        GREEN
-                </th>
-                <th>INTERMEDIATE+ <br>
-                    < 1800 <br>
-                        BLUE
-                </th>
-                <th>ADVANCED <br>
-                    < 2000 <br>
-                        PURPLE
-                </th>
-                <th>ADVANCED+ <br>
-                    < 2200 <br>
-                        BROWN
-                </th>
-                <th>COMPETITIVE <br>
-                    < 2400 <br>
-                        BLACK
-                </th>
-                <th>COMPETITIVE+ <br>
-                    < 2700 <br>
-                        RED
-                </th>
+                <th class="no-border"></th> <!-- Empty header cell for DEFENSIVE -->
+                <th class="no-border"></th> <!-- Empty header for the new skills column (no border) -->
+                <th>Beginner</th>
+                <th>Intermediate</th>
+                <th>Advanced</th>
+                <th>Competitive</th>
             </tr>
         </thead>
         <tbody>
+            <!-- DEFENSIVE Section -->
             <tr>
-                <td><strong>OFFENSE</strong></td>
+                <td rowspan="3" class="big-rowspan-cell">DEFENSIVE</td> <!-- Rowspan for DEFENSIVE -->
+                <td class="no-border-cell">Passing</td> <!-- No border for this cell -->
+                <td>Beginner passing skill description</td>
+                <td>Intermediate passing skill description</td>
+                <td>Advanced passing skill description</td>
+                <td>Competitive passing skill description</td>
             </tr>
             <tr>
-                <td>Spiking</td>
-                <td>Cannot spike</td>
-                <td>Learning to spike</td>
+                <td class="no-border-cell">Covering</td> <!-- No border for this cell -->
+                <td>Beginner covering skill description</td>
+                <td>Intermediate covering skill description</td>
+                <td>Advanced covering skill description</td>
+                <td>Competitive covering skill description</td>
             </tr>
             <tr>
-                <td>Position</td>
-                <td>Basic positioning</td>
-                <td>Understanding rotations</td>
+                <td class="no-border-cell">Blocking</td> <!-- No border for this cell -->
+                <td>Beginner blocking skill description</td>
+                <td>Intermediate blocking skill description</td>
+                <td>Advanced blocking skill description</td>
+                <td>Competitive blocking skill description</td>
+            </tr>
+            <!-- OFFENSIVE Section -->
+            <tr>
+                <td rowspan="5" class="big-rowspan-cell">OFFENSIVE</td> <!-- Rowspan for OFFENSIVE -->
+                <td class="no-border-cell">Attacking</td> <!-- No border for this cell -->
+                <td>Beginner attacking skill description</td>
+                <td>Intermediate attacking skill description</td>
+                <td>Advanced attacking skill description</td>
+                <td>Competitive attacking skill description</td>
             </tr>
             <tr>
-                <td><strong>DEFENSE</strong></td>
+                <td class="no-border-cell">Serving</td> <!-- No border for this cell -->
+                <td>Beginner serving skill description</td>
+                <td>Intermediate serving skill description</td>
+                <td>Advanced serving skill description</td>
+                <td>Competitive serving skill description</td>
             </tr>
             <tr>
-                <td>Receiving</td>
-                <td>Basic receiving</td>
-                <td>Controlled passes</td>
+                <td class="no-border-cell">Setting</td> <!-- No border for this cell -->
+                <td>Beginner setting skill description</td>
+                <td>Intermediate setting skill description</td>
+                <td>Advanced setting skill description</td>
+                <td>Competitive setting skill description</td>
             </tr>
             <tr>
-                <td>Digging</td>
-                <td>Struggles with digs</td>
-                <td>Consistent digs</td>
+                <td class="no-border-cell">Digging</td> <!-- No border for this cell -->
+                <td>Beginner digging skill description</td>
+                <td>Intermediate digging skill description</td>
+                <td>Advanced digging skill description</td>
+                <td>Competitive digging skill description</td>
+            </tr>
+            <tr>
+                <td class="no-border-cell">Transitioning</td> <!-- No border for this cell -->
+                <td>Beginner transitioning skill description</td>
+                <td>Intermediate transitioning skill description</td>
+                <td>Advanced transitioning skill description</td>
+                <td>Competitive transitioning skill description</td>
             </tr>
         </tbody>
     </table>

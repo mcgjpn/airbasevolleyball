@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <base href="/airbasevolleyball/">
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="icon" type="image/x-icon" href="/images/Microsoft-Fluentui-Emoji-Mono-Volleyball.32.png">
-        <title>About Page</title>
+        <title>Beginner Skill Level Guide</title>
     </head>
     <body>
         <header>
@@ -34,8 +34,17 @@
                                     <a href="#">Shibuya Sports Centre</a>
                                 </div>
                             </li>
-                            <li class="dropdown">
-                                <a href="skills.html" class="dropbtn">SKILL MAP</a>
+                            <li
+                                class="dropdown">
+                                
+                                <a href="javascript:void(0)" class="dropbtn">SKILL MAP</a>
+                                <div class="dropdown-content">                            
+                                    <a href="javascript:void(0)">Comparison Chart</a>
+                                    <a href="beginner.html">Beginner</a>
+                                    <a href="#">Intermediate</a>
+                                    <a href="#">Advanced</a>
+                                    <a href="#">Competitive</a>
+                                </div>
                             </li>
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
@@ -50,9 +59,49 @@
                 </div>
             </div>
         </header>
-        <div class="width-of-page-container">
-<h1>About Page</h1>
-<img src="images/pic01.jpg" width="200" height="200">
+        
+<h1 class="page-header"> Beginner Skill Level Guide </h1>
+<br>
+<div class="width-of-page-container">
+    <p>&nbsp;&nbsp;&nbsp;This is the beginner skill level guide page.  Please use this page to determine which Airbase Volleyball pickup game to participate in.</p>
+    <div class="rules-container">
+        <div class="rule-item">
+            <button class="expand-btn" onclick="toggleExpand(this)">Overall Skill Level</button>
+            <div class="expand-content">
+                <p><b>Tier "C": </b> This game will focus on having the least amount of rules to allow for more touches and rallies.</p>
+                <br>
+                <ul class="rules-bullet-list">
+                    <li>hi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rule-item">
+            <button class="expand-btn" onclick="toggleExpand(this)">HIGH INTERMEDIATE / LOW ADVANCED</button>
+            <div class="expand-content">
+                <p><b>Tier "B": </b> This game will require more precision in all areas of the game, still with a focus on improvement and rallies.</p>
+                <br>
+                <ul class="rules-bullet-list">
+                    <table>
+                        <tr><td><b>Net Height:                </b></td> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;235-238 cm</td></tr>
+                       
+                    </table>
+                </ul>
+            </div>
+        </div>
+        <div class="rule-item">
+            <button class="expand-btn" onclick="toggleExpand(this)">HIGH ADVANCED / COMPETITIVE</button>
+            <div class="expand-content">
+                <p><b>Tier "A": </b> This game will feature serious and competitive players.  It is expected that all rules are followed, similar to a professional game.</p>
+                <br>
+                <ul class="rules-bullet-list">
+                    <table>
+                        <tr><td><b>Net Height:                </b></td> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;243 cm</td></tr>
+                      
+                    </table>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
         <footer>
             <!-- You can create your footer here, and it will be shared across all pages -->

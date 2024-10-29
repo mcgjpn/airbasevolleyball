@@ -74,8 +74,8 @@ header {
     border-radius: 5px; /* Optional: adds rounded corners */
     margin-bottom: 20px; /* Optional: adds space below the header */
     width: 100%; /* Full width */
-    text-align: right; /* Center text */
-    padding-right: 1365px; /* Add padding to the right */
+    text-align: center; /* Center text */
+    /* padding-right: 1365px;  */
     margin: 0; /* Remove default margin */
     font-size:x-large;
 }
@@ -327,4 +327,38 @@ li.dropdown {
   color: #333;
   display: list-item; /* Ensure list items behave like block items */
   width: 100%; /* Make sure each list item takes up full width */
+}
+
+
+th, td {
+  padding: 0.2em 0.4em;
+  border: 1px solid #000; /* Applies border to all headers and data cells */
+}
+
+.no-border {
+  border: none; /* Removes the border for the specified header */
+}
+
+.big-rowspan-cell {
+  border: 1px solid #000; /* Ensure this cell has a border */
+}
+
+.descriptions-skill-table {
+  background-color: rgb(255, 255, 255);
+}
+
+.beginner-skill-table {
+  background-color: rgb(231, 231, 231);
+}
+
+.intermediate-skill-table {
+  background-color: #ffa;
+}
+
+.advanced-skill-table {
+  background-color: rgb(255, 225, 170);
+}
+
+.competitive-skill-table {
+  background-color: rgb(255, 173, 170);
 }
