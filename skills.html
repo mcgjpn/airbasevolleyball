@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="icon" type="image/x-icon" href="/images/Microsoft-Fluentui-Emoji-Mono-Volleyball.32.png">
-        <title>Skills Page</title>
+        <title>Skill Level Guide</title>
     </head>
     <body>
         <header>
@@ -20,18 +20,10 @@
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropbtn">GAMES</a>
                                 <div class="dropdown-content">
-                                    <a href="#">Pickup Games</a>
+                                    
                                     <a href="rules.html">Rules</a>
-                                    <a href="#">Net Setup</a>
-                                    <div class="nested-dropdown">
-                                        <a href="javascript:void(0)">Format</a>
-                                        <div class="nested-dropdown-content">
-                                            <a href="#">Beginner</a>
-                                            <a href="#">Intermediate</a>
-                                            <a href="#">Advanced</a>
-                                            <a href="#">Reverse 6s</a>
-                                        </div>
-                                    </div>
+                                    <a href="formats.html">Formats</a>
+                                    
                                 </div>
                             </li>
                             <li class="dropdown">
@@ -42,26 +34,8 @@
                                     <a href="#">Shibuya Sports Centre</a>
                                 </div>
                             </li>
-                            <li
-                                class="dropdown">
-                                
-                                <a href="javascript:void(0)" class="dropbtn">SKILL MAP</a>
-                                <div class="dropdown-content">
-                                    <div class="nested-dropdown">
-                                        <a href="javascript:void(0)">Comparison Chart</a>
-                                        <div class="nested-dropdown-content">
-                                            <a href="#">Offense</a>
-                                            <a href="#">Defense</a>
-                                            <a href="#">Position</a>
-                                            <a href="#">IQ</a>
-                                        </div>
-                                    </div>
-                                    <a href="#">Beginner</a>
-                                    <a href="#">Intermediate</a>
-                                    <a href="#">Advanced</a>
-                                    <a href="#">Competitive</a>
-                                    <a href="#">Professional</a>
-                                </div>
+                            <li class="dropdown">
+                                <a href="skills.html" class="dropbtn">SKILL MAP</a>
                             </li>
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
@@ -76,83 +50,100 @@
                 </div>
             </div>
         </header>
-        <div class="width-of-page-container">
-    <h1>Skills Page</h1>
-    <p>This page will display all 10 skill levels so you can assess your skill level.</p>
-    <img src="images/pic01.jpg" width="200" height="200">
-
-    <table class="skill-table">
+        
+<h1 class="page-header"> Skill Level Guide </h1>
+<br>
+<div class="width-of-page-container">
+    <p>&nbsp;&nbsp;&nbsp;This is the skill level guide page. Please use this page to determine which Airbase
+        Volleyball pickup game to participate in.</p>
+    <br>
+    <table>
+        <colgroup>
+            <col class="descriptions-skill-table" />
+            <col class="no-border" /> <!-- Column for Passing, Covering, Blocking -->
+            <col class="beginner-skill-table" />
+            <col class="intermediate-skill-table" />
+            <col class="advanced-skill-table" />
+            <col class="competitive-skill-table" />
+        </colgroup>
         <thead>
             <tr>
-                <th></th>
-                <th>BEGINNER <br>
-                    < 1500 <br>
-                        WHITE
-                </th>
-                <th>BEGINNER+ <br>
-                    < 1600 <br>
-                        YELLOW
-                </th>
-                <th>INTERMEDIATE <br>
-                    < 1700 <br>
-                        GREEN
-                </th>
-                <th>INTERMEDIATE+ <br>
-                    < 1800 <br>
-                        BLUE
-                </th>
-                <th>ADVANCED <br>
-                    < 2000 <br>
-                        PURPLE
-                </th>
-                <th>ADVANCED+ <br>
-                    < 2200 <br>
-                        BROWN
-                </th>
-                <th>COMPETITIVE <br>
-                    < 2400 <br>
-                        BLACK
-                </th>
-                <th>COMPETITIVE+ <br>
-                    < 2700 <br>
-                        RED
-                </th>
+                <th class="no-border"></th> <!-- Empty header cell for DEFENSIVE -->
+                <th class="no-border"></th> <!-- Empty header for the new skills column (no border) -->
+                <th>Beginner</th>
+                <th>Intermediate</th>
+                <th>Advanced</th>
+                <th>Competitive</th>
             </tr>
         </thead>
         <tbody>
+            <!-- DEFENSIVE Section -->
             <tr>
-                <td><strong>OFFENSE</strong></td>
+                <td rowspan="3" class="big-rowspan-cell">DEFENSIVE</td> <!-- Rowspan for DEFENSIVE -->
+                <td class="no-border-cell">Passing</td> <!-- No border for this cell -->
+                <td>Beginner passing skill description</td>
+                <td>Intermediate passing skill description</td>
+                <td>Advanced passing skill description</td>
+                <td>Competitive passing skill description</td>
             </tr>
             <tr>
-                <td>Spiking</td>
-                <td>Cannot spike</td>
-                <td>Learning to spike</td>
+                <td class="no-border-cell">Covering</td> <!-- No border for this cell -->
+                <td>Beginner covering skill description</td>
+                <td>Intermediate covering skill description</td>
+                <td>Advanced covering skill description</td>
+                <td>Competitive covering skill description</td>
             </tr>
             <tr>
-                <td>Position</td>
-                <td>Basic positioning</td>
-                <td>Understanding rotations</td>
+                <td class="no-border-cell">Blocking</td> <!-- No border for this cell -->
+                <td>Beginner blocking skill description</td>
+                <td>Intermediate blocking skill description</td>
+                <td>Advanced blocking skill description</td>
+                <td>Competitive blocking skill description</td>
+            </tr>
+            <!-- OFFENSIVE Section -->
+            <tr>
+                <td rowspan="5" class="big-rowspan-cell">OFFENSIVE</td> <!-- Rowspan for OFFENSIVE -->
+                <td class="no-border-cell">Attacking</td> <!-- No border for this cell -->
+                <td>Beginner attacking skill description</td>
+                <td>Intermediate attacking skill description</td>
+                <td>Advanced attacking skill description</td>
+                <td>Competitive attacking skill description</td>
             </tr>
             <tr>
-                <td><strong>DEFENSE</strong></td>
+                <td class="no-border-cell">Serving</td> <!-- No border for this cell -->
+                <td>Beginner serving skill description</td>
+                <td>Intermediate serving skill description</td>
+                <td>Advanced serving skill description</td>
+                <td>Competitive serving skill description</td>
             </tr>
             <tr>
-                <td>Receiving</td>
-                <td>Basic receiving</td>
-                <td>Controlled passes</td>
+                <td class="no-border-cell">Setting</td> <!-- No border for this cell -->
+                <td>Beginner setting skill description</td>
+                <td>Intermediate setting skill description</td>
+                <td>Advanced setting skill description</td>
+                <td>Competitive setting skill description</td>
             </tr>
             <tr>
-                <td>Digging</td>
-                <td>Struggles with digs</td>
-                <td>Consistent digs</td>
+                <td class="no-border-cell">Digging</td> <!-- No border for this cell -->
+                <td>Beginner digging skill description</td>
+                <td>Intermediate digging skill description</td>
+                <td>Advanced digging skill description</td>
+                <td>Competitive digging skill description</td>
+            </tr>
+            <tr>
+                <td class="no-border-cell">Transitioning</td> <!-- No border for this cell -->
+                <td>Beginner transitioning skill description</td>
+                <td>Intermediate transitioning skill description</td>
+                <td>Advanced transitioning skill description</td>
+                <td>Competitive transitioning skill description</td>
             </tr>
         </tbody>
     </table>
 </div>
+
         <footer>
             <!-- You can create your footer here, and it will be shared across all pages -->
             <div class="footer-content">
-                <p>Follow us on social media</p>
                 <!-- Add social media links, contact info, etc. -->
             </div>
         </footer>
