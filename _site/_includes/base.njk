@@ -9,47 +9,42 @@
         <title>{{ title }}</title>
     </head>
     <body>
-        <header>
-            <div class="header-container">
-                <div class="header-content">
-                    <a href="index.html" class="logo-link">
-                        <h1 class="logo">Airbase Volleyball</h1>
-                    </a>
-                    <nav class="navbar">
-                        <ul>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">GAMES</a>
-                                <div class="dropdown-content">
-                                    {# <a href="#">Pickup Games</a> #}
-                                    <a href="rules.html">Rules</a>
-                                    <a href="formats.html">Formats</a>
-                                    {# <a href="#">Net Setup</a> #}
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">LOCATIONS</a>
-                                <div class="dropdown-content">
-                                    <a href="#">Hatadonai</a>
-                                    <a href="#">Yoyogisanya</a>
-                                    <a href="#">Shibuya Sports Centre</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="skills.html" class="dropbtn">SKILL MAP</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
-                                <div class="dropdown-content">
-                                    <a href="#">About Airbase Volleyball</a>
-                                    <a href="#">Policies</a>
-                                    <a href="#">Contact Us</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+       <header>
+    <div class="header-container">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="/images/airbase volleyball logo.jfif" alt="Airbase Volleyball Logo" class="logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">GAMES</a>
+                        <div class="dropdown-content">
+                            <a href="rules.html">Rules</a>
+                            <a href="formats.html">Formats</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">LOCATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="#">Hatadonai</a>
+                            <a href="#">Yoyogisanya</a>
+                            <a href="#">Shibuya Sports Centre</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+                        <div class="dropdown-content">
+                            <a href="#">About Airbase Volleyball</a>
+                            <a href="#">Policies</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
         {{ content | safe }}
         <footer>
             <!-- You can create your footer here, and it will be shared across all pages -->
